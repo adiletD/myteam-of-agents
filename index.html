@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Snake 🐍 - Learn Addition While Playing!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with title and score -->
+        <header>
+            <h1>🐍 Math Snake</h1>
+            <div class="score-container">
+                <span class="score-label">Score:</span>
+                <span id="score" class="score-value">0</span>
+            </div>
+        </header>
+
+        <!-- Math problem display -->
+        <div id="problem-display" class="problem-display">
+            <span id="problem-text">Press SPACE to start!</span>
+        </div>
+
+        <!-- Game canvas -->
+        <div class="game-wrapper">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <!-- Controls hint -->
+        <div class="controls-hint">
+            Use Arrow Keys or WASD to move • Eat the correct answer!
+        </div>
+
+        <!-- Game Over Modal -->
+        <div id="gameOverModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>🎉 Great Job!</h2>
+                <p id="gameOverMessage">You solved <span id="finalScore">0</span> problems!</p>
+                <p class="encouragement" id="encouragementMessage">Keep practicing!</p>
+                <button id="restartButton" class="btn-primary">Play Again</button>
+            </div>
+        </div>
+
+        <!-- Start/Instructions Modal -->
+        <div id="startModal" class="modal">
+            <div class="modal-content">
+                <h2>🐍 Welcome to Math Snake!</h2>
+                <div class="instructions">
+                    <p><strong>How to Play:</strong></p>
+                    <ol>
+                        <li>A math problem will appear at the top</li>
+                        <li>Move the snake with <strong>Arrow Keys</strong> or <strong>WASD</strong></li>
+                        <li>Eat the number that solves the problem!</li>
+                        <li>Wrong answer = Game Over ❌</li>
+                        <li>Correct answer = Snake grows and you score! ✅</li>
+                    </ol>
+                </div>
+                <button id="startButton" class="btn-primary">Start Playing!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
+
